@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 5
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color:rgb(215, 191, 191);
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: red;
+
+                border: 10px;
+            }
+
+            button {
+                color: red;
+            }
+
+            h4 {
+                font-weight: bolder;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <h1> MODIFIED FLAMES </h1>
+
+        <button onclick= "flames()"> Match Names </button>
+        <h3 id="name"></h3>
+
+        <h4> THE TWO PEOPLE ARE: </h4>
+        <h3 id="result"> </h3>
+
+
+        <script>
+            function flames() {
+                var name1 = prompt("Enter the full name of a person");
+                var name2 = prompt("Enter the full name of the person you want to test the first person with");
+
+                var totalName = name1.split(" ").join("") + name2.split(" ").join("");
+                var count = totalName.length;
+                var flames = count % 6;
+
+                    switch(flames){
+                        case 1:
+                        document.getElementById("result").innerHTML= "friends";
+                        break;
+                        case 2:
+                        document.getElementById("result").innerHTML= "lovers";
+                        break;
+                        case 3:
+                        document.getElementById("result").innerHTML= "affectionate with each other";
+                        break;
+                        case 4:
+                        document.getElementById("result").innerHTML= "married";
+                        break;
+                        case 5:
+                        document.getElementById("result").innerHTML= "enemies";
+                        break;
+                        case 6:
+                        document.getElementById("result").innerHTML= "sweethearts";
+                        break;
+                }
+                
+                document.getElementById("name").innerHTML = name1 + " and " + name2;
+               
+            }
+        </script>
+    </body>
+</html>
