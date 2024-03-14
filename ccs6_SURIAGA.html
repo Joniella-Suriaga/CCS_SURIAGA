@@ -16,6 +16,7 @@
            
         </style>
     </head>
+
     <body>
 
         <h1> Quadratic Formula </h1>
@@ -41,30 +42,28 @@
                 var steps = b*b - 4*a*c
 
                 if (steps > 0) {
-                    r1 = (-b - Math.sqrt(steps)) / (2*a);
-                    r2 = (-b + Math.sqrt(steps)) / (2*a);
+                    r1 = ((-b - Math.sqrt(steps)) / (2*a)).toFixed(4);
+                    r2 = ((-b + Math.sqrt(steps)) / (2*a)).toFixed(4);
 
                     document.getElementById("result").innerHTML = "The roots of this equation is " + r1 + " and " + r2;
                 }
 
                 else if (steps == 0) {
-                    r1 = r2 = -b / (2*a);
+                    r1 = r2 = (-b / (2*a)).toFixed(4);
 
                     document.getElementById("result").innerHTML = "The root/s of this equation is " + r1 ;
                  }
 
-                 else {
-                    var realNum = (-b / (2*a)).toFixed(2);
-                    var imagiNum = (Math.sqrt(-steps) / (2*a)).toFixed(2);
 
-                    document.getElementById("result").innerHTML = "The roots of this equation is " + realNum + " and " + imagiNum;
+                 else {
+                    document.getElementById("result").innerHTML = "The x1 and x2 of this equation are imaginary numbers.";
                  }
 
                 }
                  
                 function formula() {
                    
-                    document.getElementById("display").innerHTML = "(" + a + ")" + "+" + "(" + b + ")" + "+" + "(" + c + ")";
+                    document.getElementById("display").innerHTML = "(" + a + ")x<sup>2</sup>" + "+" + "(" + b + ")x" + " +" + "(" + c + ")";
                 }
 
            
