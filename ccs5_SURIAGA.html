@@ -39,7 +39,7 @@
                 var name1 = prompt("Enter the full name of a person");
                 var name2 = prompt("Enter the full name of the person you want to test the first person with");
 
-                var totalName = name1.split(" ").split(/[-_./]/).join("") + name2.split(" ").split(/[-_./]/).join("");
+                var totalName = name1.replace(/[-_.]/, " ").split(" ").join("") + name2.replace(/[-_.]/, " ").split(" ").join("");
                 var count = totalName.length;
                 var flames = count % 6;
 
